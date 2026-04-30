@@ -32,7 +32,7 @@ public class AnalislLexicoExamen {
 
 			            if (matcher.group(1) != null) {
 			                numeros.add(match);
-			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,}")) {
+			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,")) {
 			                mixto.add(match);
 			            } else if (match.matches("[A-Z]{2,}")) {
 			                soloMayusculas.add(match);
@@ -52,7 +52,6 @@ public class AnalislLexicoExamen {
 		int total = numeros.size() + mixto.size() + soloMayusculas.size() + soloMinusculas.size();
 			     System.out.println("Total de Validos: " + total);
 	}
-}
 }
 		
 
