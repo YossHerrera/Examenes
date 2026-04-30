@@ -36,8 +36,17 @@ public class AnalislLexicoExamen {
 			                mixto.add(match);
 			            } else if (match.matches("[A-Z]{2,}")) {
 			                soloMayusculas.add(match);
-			            
-
+			            } else if (match.matches("[a-z]{2,}")) {
+			                soloMinusculas.add(match);
+			            } else {
+			                System.out.println("Inválido: " + match);
+			            }
+			          
+			     }
+			     //Mostrar resultados
+			     System.out.println("Numero: " + numeros);
+			     System.out.println("Mixto: " + mixto);
+			     
 
 	}
 
