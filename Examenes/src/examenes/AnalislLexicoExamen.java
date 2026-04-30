@@ -14,7 +14,11 @@ public class AnalislLexicoExamen {
 				"Esto es un texto de prueba. 3. .5 12a 51-50 holaMundo. A B C \n" + 
 				"MINUSCULAS minusculas MIXto mIxto 123 45.67 .78 99.";
 		
-		String regex ="\\b//d+\\.//d+"
+        String regex = "(\\b\\d+\\.\\d+\\b|"
+        		+ "\\b\\d+\\b)|"
+        		+ "\\b(?=\\w*[a-z])(?=\\w*[A-Z])[A-Za-z]{2,}\\b|"
+        		+ "\\b[A-Z]{2,}\\b|\\b[a-z]{2,}\\b";
+        
 				 Pattern pattern = Pattern.compile(regex);
 				 Matcher matcher = pattern.matcher(entrada);
 				
@@ -23,7 +27,16 @@ public class AnalislLexicoExamen {
 			     ArrayList<String> soloMayusculas = new ArrayList<>();
 			     ArrayList<String> soloMinusculas = new ArrayList<>();
 			   
-			     while(matcher.)
+			     while (matcher.find()) {
+			            String match = matcher.group();
+
+			            if (matcher.group(1) != null) {
+			                numeros.add(match);
+			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,}")) {
+			                mixto.add(match);
+			            } else if (match.matches("[A-Z]{2,}")) {
+			                soloMayusculas.add(match);
+			            
 
 
 	}
