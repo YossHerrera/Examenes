@@ -27,16 +27,16 @@ public class AnalislLexicoExamen {
 			     ArrayList<String> soloMayusculas = new ArrayList<>();
 			     ArrayList<String> soloMinusculas = new ArrayList<>();
 			   
-			     while (matcher.find()) {
+			     while (matcher.find()) {{
 			            String match = matcher.group();
 
-			            if (matcher.group(1) != null) {
+			            if (matcher.group(1) != null) {{
 			                numeros.add(match);
 			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,}")) {
 			                mixto.add(match);
 			            } else if (match.matches("[A-Z]{2,}")) {
 			                soloMayusculas.add(match);
-			            } else if (match.matches("[a-z]{2,}")) {
+			            } else if (match.matches("[a-z]{2,}")) {{
 			                soloMinusculas.add(match);
 			            } else {
 			                System.out.println("Inválido: " + match);
@@ -46,8 +46,11 @@ public class AnalislLexicoExamen {
 			     //Mostrar resultados
 			     System.out.println("Numero: " + numeros);
 			     System.out.println("Mixto: " + mixto);
+			     System.out.println("Mayusculas: " + soloMayusculas);
+			     System.out.println("Minusculas: " + soloMinusculas);
 			     
-
+		
 	}
-
+			     }
 }
+
