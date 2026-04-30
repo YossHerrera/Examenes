@@ -39,9 +39,12 @@ public class AnalislLexicoExamen {
 			            } else if (match.matches("[a-z]{2,}")) {
 			                soloMinusculas.add(match);
 			            } else {
-			                System.out.println("Inválido: " + match);
+			                System.out.println("Invalido: " + match);
 			            }
-			          
+			            String token = null;
+						//if (!token.isEmpty()) {
+		                   // System.out.println("Inválido: " + token);
+		                //}
 			     }
 			     //Mostrar resultados
 			     System.out.println("Numero: " + numeros);
@@ -51,6 +54,7 @@ public class AnalislLexicoExamen {
 			     
 		int total = numeros.size() + mixto.size() + soloMayusculas.size() + soloMinusculas.size();
 			     System.out.println("Total de Validos: " + total);
+			     
 	}
 }
 		
