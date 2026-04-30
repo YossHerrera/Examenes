@@ -30,13 +30,13 @@ public class AnalislLexicoExamen {
 			     while (matcher.find()) {{
 			            String match = matcher.group();
 
-			            if (matcher.group(1) != null) {{
+			            if (matcher.group(1) != null) {
 			                numeros.add(match);
 			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,}")) {
 			                mixto.add(match);
 			            } else if (match.matches("[A-Z]{2,}")) {
 			                soloMayusculas.add(match);
-			            } else if (match.matches("[a-z]{2,}")) {{
+			            } else if (match.matches("[a-z]{2,}")) {
 			                soloMinusculas.add(match);
 			            } else {
 			                System.out.println("Inválido: " + match);
@@ -49,8 +49,10 @@ public class AnalislLexicoExamen {
 			     System.out.println("Mayusculas: " + soloMayusculas);
 			     System.out.println("Minusculas: " + soloMinusculas);
 			     
+		int total = numeros.size() + mixto.size() + soloMayusculas.size() + soloMinusculas.size();
+			     System.out.println("Total de Validos: " + total);
+		 }
+
+	}//Error
 		
-	}
-			     }
-}
 
