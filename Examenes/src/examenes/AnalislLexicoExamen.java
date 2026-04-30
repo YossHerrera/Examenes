@@ -27,7 +27,7 @@ public class AnalislLexicoExamen {
 			     ArrayList<String> soloMayusculas = new ArrayList<>();
 			     ArrayList<String> soloMinusculas = new ArrayList<>();
 			   
-			     while (matcher.find()) {{
+			     while (matcher.find()) {
 			            String match = matcher.group();
 
 			            if (matcher.group(1) != null) {
@@ -51,8 +51,8 @@ public class AnalislLexicoExamen {
 			     
 		int total = numeros.size() + mixto.size() + soloMayusculas.size() + soloMinusculas.size();
 			     System.out.println("Total de Validos: " + total);
-		 }
-
-	}//Error
+	}
+}
+}
 		
 
