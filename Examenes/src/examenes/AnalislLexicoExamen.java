@@ -32,7 +32,7 @@ public class AnalislLexicoExamen {
 
 			            if (matcher.group(1) != null) {
 			                numeros.add(match);
-			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,")) {
+			            } else if (match.matches("(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{2,}")) {
 			                mixto.add(match);
 			            } else if (match.matches("[A-Z]{2,}")) {
 			                soloMayusculas.add(match);
@@ -41,11 +41,8 @@ public class AnalislLexicoExamen {
 			            } else {
 			                System.out.println("Invalido: " + match);
 			            }
-			            String token = null;
-						//if (!token.isEmpty()) {
-		                   // System.out.println("Inválido: " + token);
-		                //}
 			     }
+			     
 			     //Mostrar resultados
 			     System.out.println("Numero: " + numeros);
 			     System.out.println("Mixto: " + mixto);
