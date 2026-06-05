@@ -211,13 +211,125 @@ package examenes;
 	    }
 	    
 	    //Proposicion Examen Final
-	    private void proposicionEx() {
+	    private void proposicion1() {
 	    	aceptar(22);
 	    	cicloProp();
 	    	if (!aceptar(23)) {
 	    		error("Se esperaba END");
 	    }
     }
+	    private void proposicion2() {
+
+	        aceptar(28);
+
+	        if (!aceptar(A_Lexema.ID)) {
+
+	            error("Se esperaba ID");
+	        }
+
+	        if (!aceptar(A_Lexema.IGUAL)) {
+
+	            error("Se esperaba '='");
+	        }
+
+	        expresion();
+	    }
+	    private void proposicion3() {
+
+	        aceptar(32);
+
+	        idNum();
+	    }
+	    private void proposicion4() {
+
+	        aceptar(31);
+
+	        if (!aceptar(A_Lexema.ID)) {
+
+	            error("Se esperaba ID");
+	        }
+	    }
+	    private void proposicion5() {
+
+	        aceptar(33);
+
+	        if (!aceptar(A_Lexema.ID)) {
+
+	            error("Se esperaba ID");
+	        }
+	    }
+	    private void proposicion6() {
+
+	        aceptar(24);
+
+	        condicion();
+
+	        if (!aceptar(25)) {
+
+	            error("Se esperaba THEN");
+	        }
+
+	        proposicion();
+	    }
+	    private void proposicion7() {
+
+	        aceptar(26);
+
+	        condicion();
+
+	        if (!aceptar(27)) {
+
+	            error("Se esperaba DO");
+	        }
+
+	        proposicion();
+	    }
+	    private void proposicion8() {
+
+	        aceptar(28);
+
+	        if (!aceptar(A_Lexema.ID)) {
+
+	            error("Se esperaba ID");
+	        }
+
+	        if (!aceptar(A_Lexema.IGUAL)) {
+
+	            error("Se esperaba '='");
+	        }
+
+	        expresion();
+
+	        to_down();
+
+	        expresion();
+
+	        if (!aceptar(27)) {
+
+	            error("Se esperaba DO");
+	        }
+
+	        proposicion();
+	    }
+	    private void proposicionFinal() {
+
+	        aceptar(26);
+
+	        condicion();
+
+	        if (!aceptar(27)) {
+
+	            error("Se esperaba DO");
+	        }
+
+	        proposicion();
+	    }
+	    
+
+	    
+	    
+	    
+	    
 	    
 
 	    // BLOQUE
@@ -470,12 +582,12 @@ package examenes;
 
 	        aceptar(32);
 
-	        valor();
+	        idNum();
 	    }
 
 	    // VALOR
 
-	    private void valor() {
+	    private void idNum() {
 
 	        if (aceptar(A_Lexema.ID)) {
 	            return;
@@ -562,7 +674,7 @@ package examenes;
 
 	        expresion();
 
-	        direccion();
+	        to_down();
 
 	        expresion();
 
@@ -576,7 +688,7 @@ package examenes;
 
 	    // DIRECCION
 
-	    private void direccion() {
+	    private void to_down() {
 
 	        if (actual() == null) {
 
