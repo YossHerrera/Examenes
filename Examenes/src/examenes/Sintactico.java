@@ -218,6 +218,7 @@ package examenes;
 	    		error("Se esperaba END");
 	    }
     }
+	    
 
 	    // BLOQUE
 
@@ -426,7 +427,7 @@ package examenes;
 
 	        aceptar(22);
 
-	        listaProp();
+	        cicloProp();
 
 	        if (!aceptar(23)) {
 
@@ -436,7 +437,7 @@ package examenes;
 
 	    // LISTA PROP
 
-	    private void listaProp() {
+	    private void cicloProp() {
 
 	        proposicion();
 
