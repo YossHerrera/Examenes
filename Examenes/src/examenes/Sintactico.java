@@ -315,21 +315,15 @@ package examenes;
 
 	        aceptar(26);
 
-	        condicion();
+	        proposicion();
 
 	        if (!aceptar(27)) {
 
-	            error("Se esperaba DO");
+	            error("Se esperaba while");
 	        }
 
-	        proposicion();
+	        condicion();
 	    }
-	    
-
-	    
-	    
-	    
-	    
 	    
 
 	    // BLOQUE

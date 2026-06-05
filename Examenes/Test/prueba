@@ -1,0 +1,9 @@
+Const x=3.1416, y=05;
+var_a,b___1;
+do
+begin!
+read a;
+b=x*y/a;
+write b
+end
+whil a<b.
